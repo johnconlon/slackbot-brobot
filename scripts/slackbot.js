@@ -41,7 +41,7 @@ module.exports = function(robot) {
        res.reply("Please specify a time.");
     } else {
     	res.send(`@Channel Happy Hour at ${happyHourTime}`);
-    	return robot.adapter.client.web.channel.setPurpose(res.message.room, 'Happy hour at ${happyHourTime}')
+    	return robot.adapter.client.web.channels.setTopic(res.message.room, 'Happy hour at ${happyHourTime}')
     }
   });
 };
