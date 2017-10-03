@@ -32,6 +32,7 @@ Then you can interact with Brobot by typing `Brobot help`.
     Brobot> Brobot help
     Brobot animate me <query> - The same thing as `image me`, except adds [snip]
     Brobot help - Displays all of the help commands that Brobot knows about.
+    Brobot happy hour at <query> - Set the purpose of the channel to a happy hour and notifies members of the channel.
     ...
 
 ### Configuration

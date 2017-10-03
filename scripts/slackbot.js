@@ -17,6 +17,9 @@
 // Author:
 // <github username of the original script author>
 //
+var WebClient = require('@slack/client').WebClient;
+var token = process.env.HUBOT_SLACK_TOKEN;
+var web = new WebClient(token);
 
 let party = ["Let's slam some brewskis!", "Bro you know I'm down!", "Let's Do this", "I don't have my wallet but I'll totally pay you tomorrow", "Kappa Sigma for life!", "Yolo"];
 
@@ -37,7 +40,7 @@ module.exports = function(robot) {
     if (!happyHourTime) {
        res.reply("Please specify a time.");
     } else {
-    	res.send(`@Channel Happy Hour ${happyHourTime}`);
+    	res.send(`@Channel Happy Hour at ${happyHourTime}`);
     	return robot.adapter.client.web.channel.setPurpose(res.message.room, 'Happy hour at ${happyHourTime}')
     }
   });
